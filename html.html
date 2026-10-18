@@ -2,22 +2,28 @@
 <html>
 <head>
     <title>Student Form</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <h1>Enter Student Details</h1>
+   <div id="container">
 
-    <form action="/student" method="POST">
-        <label for="name">Student Name:</label>
-        <input type="text" id="name" name="studentName" required>
+    <!-- left side menu-->
+    <div id="sidebar">
+        <form method="post" action="/sidebar">
+            <button id="dashboard" type="submit" name="page" value="dashboard">Dashboard</button><br>
+            <button id="Attandance" type="submit" name="page" value="attandance">Attandance</button><br>
+            <button id="Timetable" type="submit" name="page" value="timetable">Timetable</button><br>
+            <button id="Profile" type="submit" name="page" value="profile">Profile</button><br>
+            <button id="Logout" type="submit" name="page" value="logout">Logout</button><br>
+        </form>
+    </div>
 
-        <button type="submit">Submit</button>        
-    </form>
+    <!-- right side content-->
+    <div id="maincontent">
+        <h1>main content will appear hear</h1>
+    </div>
 
-    <form action="/batch" method="POST">
-        <label for="batch">your batch</label>
-        <input type="text" id="batch" name="studentbatch" required>
-        <button type="submit">submit name</button>
-    </form>
-    <script src="index.js"></script>
+    </div>
 </body>
+<script src="index.js"></script>
 </html>
